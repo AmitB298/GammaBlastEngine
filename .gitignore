@@ -17,3 +17,9 @@ dist/
 .vscode/
 .idea/
 .DS_Store
+
+*.bak*
+
+# backup files
+*.bak*
+*.bak
