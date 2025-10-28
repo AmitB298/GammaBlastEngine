@@ -3,6 +3,7 @@ import time
 import uuid
 from starlette.types import ASGIApp, Scope, Receive, Send, Message
 
+
 class RequestLogMiddleware:
     def __init__(self, app: ASGIApp, service: str = "GammaBlastEngine") -> None:
         self.app = app

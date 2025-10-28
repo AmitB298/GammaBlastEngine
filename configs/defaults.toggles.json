@@ -1,0 +1,6 @@
+{
+  "sentiment_enabled": true,
+  "rl": {
+    "enabled": true
+  }
+}

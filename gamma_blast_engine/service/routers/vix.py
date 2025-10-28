@@ -3,12 +3,14 @@ from pydantic import BaseModel
 
 router = APIRouter(tags=["vix"])
 
+
 class VixTerm(BaseModel):
     spot: float
     vix3m: float
     vix6m: float
     slope_1_3m: float
     slope_3_6m: float
+
 
 @router.get("/vix", response_model=VixTerm)
 def vix_term_stub():

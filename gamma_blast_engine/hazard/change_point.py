@@ -59,24 +59,16 @@ class BiasRegimeController:
         # Center around ~2.0: above => stress; below => calm
         event = self.cusum_lambda.step(lambda_z - 2.0)
         if event == +1:
-            self.bias = clamp(
-                self.bias + self.cfg.bump_up, self.cfg.min_bias, self.cfg.max_bias
-            )
+            self.bias = clamp(self.bias + self.cfg.bump_up, self.cfg.min_bias, self.cfg.max_bias)
         elif event == -1:
-            self.bias = clamp(
-                self.bias - self.cfg.bump_dn, self.cfg.min_bias, self.cfg.max_bias
-            )
+            self.bias = clamp(self.bias - self.cfg.bump_dn, self.cfg.min_bias, self.cfg.max_bias)
         return self.bias
 
     def step_ppv(self, ppv_err: float) -> float:
         # Positive error (target_ppv - actual_ppv) => we are too loose -> bump up
         event = self.cusum_ppv.step(ppv_err)
         if event == +1:
-            self.bias = clamp(
-                self.bias + self.cfg.bump_up, self.cfg.min_bias, self.cfg.max_bias
-            )
+            self.bias = clamp(self.bias + self.cfg.bump_up, self.cfg.min_bias, self.cfg.max_bias)
         elif event == -1:
-            self.bias = clamp(
-                self.bias - self.cfg.bump_dn, self.cfg.min_bias, self.cfg.max_bias
-            )
+            self.bias = clamp(self.bias - self.cfg.bump_dn, self.cfg.min_bias, self.cfg.max_bias)
         return self.bias

@@ -1,0 +1,8 @@
+# Log files
+*.log
+*.jsonl
+*.csv
+
+# Temporary files
+*.tmp
+*.temp
