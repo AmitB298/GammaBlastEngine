@@ -1,5 +1,7 @@
 # GammaBlastEngine
 
+![CI](https://github.com/AmitB298/GammaBlastEngine/actions/workflows/ci.yml/badge.svg)
+
 Analysis-only FastAPI service scaffold.
 Run dev server:
 1) python -m venv .venv
