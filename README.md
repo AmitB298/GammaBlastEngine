@@ -8,3 +8,6 @@ Run dev server:
 2) .\.venv\Scripts\activate
 3) pip install -r requirements.txt
 4) python -m gamma_blast_engine.service.app
+
+
+<!-- Last CI trigger: 2025-10-29 03:39:25 -->
