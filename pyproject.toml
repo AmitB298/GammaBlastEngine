@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gamma-blast-engine"
+version = "0.2.0"
+description = "Local GammaBlastEngine research stack for gamma-blast prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "orjson",
+    "prometheus-client>=0.20.0"
+]
+
+[tool.setuptools]
+packages = ["gamma_blast_engine"]
+
+[tool.setuptools.package-dir]
+gamma_blast_engine = "gamma_blast_engine"
+
+[tool.setuptools.exclude-package-data]
+"*" = ["data*", "logs*", "configs*", "dashboard*"]
