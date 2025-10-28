@@ -36,7 +36,7 @@ mypy_extensions==1.1.0
 networkx==3.5
 nodeenv==1.9.1
 numpy==2.3.3
-orjson==3.11.3
+orjson==3.11.4
 packaging==25.0
 pandas==2.3.3
 pathspec==0.12.1
